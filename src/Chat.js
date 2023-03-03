@@ -30,7 +30,7 @@ const Chat = () => {
   };
 
   const fetchBotMessage = useCallback(() => {
-    fetch(`https://walrus-app-hodhq.ondigitalocean.app/vision?q=${userMessage}`)
+    fetch(`https://walrus-app-hodhq.ondigitalocean.app/visiongpt?q=${userMessage}`)
       .then((response) => response.text())
       .then((data) => {
         const botMessage = { message: data, isBot: true };
